@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="trackingApp">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>hsApp</title>
+
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- build:css css/vendor.css -->
+        <!-- bower:css -->
+        <link rel='stylesheet' href='vendor/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='vendor/animate.css/animate.css' />
+        <link rel='stylesheet' href='vendor/chartist/dist/chartist.min.css' />
+        <link rel='stylesheet' href='vendor/angular-toastr/dist/angular-toastr.css' />
+        <link rel='stylesheet' href='vendor/angular-material/angular-material.css' />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css css/app.css -->
+        <!-- inject:css -->
+        
+        <link rel="stylesheet" href="styles/app.css">
+        
+        <link rel="stylesheet" href="styles/pe-icon-7-stroke.css">
+        
+        <!-- endinject -->
+        <!-- endbuild -->
+
+        <!--     Fonts and icons     -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body ng-controller="mainController as mainCtrl">
+
+        <div class="wrapper">
+            <div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg">
+
+                <!--
+
+                    Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+                    Tip 2: you can also add an image using data-image tag
+
+                -->
+
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a ng-href="/#!/home"class="simple-text">
+                            Smart Authenticating
+                        </a>
+                    </div>
+                    <div ng-include="'app/views/elements/leftSideBar.html'"></div>
+                </div>
+            </div>
+
+            <div class="main-panel">
+                <nav class="navbar navbar-default navbar-fixed">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" ng-href="/#!/login">Portal</a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <div ng-include="'app/views/elements/topNavBar.html'"></div>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <ng-view />
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <nav class="pull-left">
+                            <ul>
+                                <li>
+                                    <a ng-href="/#!/home">
+                                        Home
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                        <p class="copyright pull-right">
+                            &copy; 2017 Gordius Team
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--  Google Maps Plugin    -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="assets/js/sockjs.min.js"></script>
+        <script type="text/javascript" src="assets/js/stomp.min.js"></script>
+        
+        <!-- build:js js/vendor.js -->
+        <!-- bower:js -->
+        <script src="vendor/jquery/dist/jquery.js"></script>
+        <script src="vendor/angular/angular.js"></script>
+        <script src="vendor/angular-route/angular-route.js"></script>
+        <script src="vendor/angular-messages/angular-messages.js"></script>
+        <script src="vendor/ngmap/build/scripts/ng-map.js"></script>
+        <script src="vendor/angular-google-chart/ng-google-chart.js"></script>
+        <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="vendor/chartist/dist/chartist.min.js"></script>
+        <script src="vendor/angular-toastr/dist/angular-toastr.tpls.js"></script>
+        <script src="vendor/angular-animate/angular-animate.js"></script>
+        <script src="vendor/angular-aria/angular-aria.js"></script>
+        <script src="vendor/angular-material/angular-material.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js js/app.js -->
+        <!-- inject:js -->
+        
+        <script src="assets/js/stomp.min.js"></script>
+        
+        <script src="assets/js/sockjs.min.js"></script>
+        
+        <script src="assets/js/light-bootstrap-dashboard.js"></script>
+        
+        <script src="assets/js/bootstrap-notify.js"></script>
+        
+        <script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+        
+        <script src="app/app.js"></script>
+        
+        <script src="app/controllers/mainController.js"></script>
+        
+        <script src="app/controllers/homeController.js"></script>
+        
+        <script src="app/services/notificationService.js"></script>
+        
+        <script src="app/services/authenticationService.js"></script>
+        
+        <script src="app/directives/authPasswordDirective.js"></script>
+        
+        <script src="app/directives/authEmailDirective.js"></script>
+        
+        <!-- endinject -->
+        <!-- endbuild -->
+    </body>
+</html>

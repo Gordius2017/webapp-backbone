@@ -1,0 +1,45 @@
+<ul class="nav navbar-nav navbar-left" ng-if="mainCtrl.isLogged">
+    <li>
+        <a ng-href="/#!/live" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-dashboard"></i>
+        </a>
+    </li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-globe"></i>
+            <b class="caret"></b>
+            <span class="notification">{{mainCtrl.notifications.length}}</span>
+        </a>
+        <ul class="dropdown-menu" ng-show="mainCtrl.notifications.length > 0">
+            <li ng-repeat="item in mainCtrl.notifications"><a>{{item}}</a></li>
+        </ul>
+    </li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right" ng-if="mainCtrl.isLogged">
+    <li>
+        <a ng-href="/#!/account">
+            Account
+        </a>
+    </li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            FAQ
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="#">FAQ 1</a></li>
+            <li><a href="#">FAQ 2</a></li>
+            <li><a href="#">FAQ 3</a></li>
+            <li><a href="#">FAQ 4</a></li>
+            <li><a href="#">FAQ 5</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </li>
+    <li>
+        <a ng-href="/#!/login" ng-click="mainCtrl.reloadPage();">
+            Log out
+        </a>
+    </li>
+</ul>

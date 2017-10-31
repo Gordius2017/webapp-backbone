@@ -1,0 +1,25 @@
+<div class="form-group">
+    <label>Name</label>
+    <input type="name"
+           name="name"
+           ng-model="mainCtrl.user.name"
+           ng-minlength="3"
+           class="form-control"
+           placeholder="Your name goes here"
+           required>
+    <br>
+    <label>Identification number</label>
+    <input type="id"
+            name="id"
+            ng-model="mainCtrl.user.id"
+            ng-minlength="3"
+            class="form-control"
+            placeholder="Your id goes here"
+            required>
+</div>
+
+<div ng-messages="authForm.name.$error" ng-if="authForm.name.$touched">
+    <p ng-message="required">Your name is required.</p>
+    <p ng-message="minlength">Your name is too short.</p>
+    <p ng-message="email">Your name is invalid!</p>
+</div>

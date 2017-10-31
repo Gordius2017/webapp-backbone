@@ -1,0 +1,18 @@
+<!-- Left sidebar menu when user is not logged -->
+<ul class="nav" ng-hide="mainCtrl.showLoginButton">
+    <li class="active">
+        <a ng-href="#/login">
+            <i class="pe-7s-users"></i>
+            <p>Login</p>
+        </a>
+    </li>
+</ul>
+
+<ul class="nav" ng-if="mainCtrl.showRegisterButton">
+    <li>
+        <a ng-href="/#!/input">
+            <i class="pe-7s-graph"></i>
+            <p>Register</p>
+        </a>
+    </li>
+</ul>
